@@ -11,7 +11,7 @@
     {\WHMCS\View\Asset::fontCssInclude('open-sans-family.css')}
     <link href="templates/{$template}/css/all.min.css?v={$versionHash}" rel="stylesheet" />
     <link href="templates/{$template}/css/theme.min.css?v={$versionHash}" rel="stylesheet" />
-	<link href="templates/{$template}/css/dark-mode.css?v={$versionHash}" rel="stylesheet" />
+	<link href="templates/{$template}/css/dark.css?v={$versionHash}" rel="stylesheet" />
     <link href="{\WHMCS\Utility\Environment\WebHelper::getBaseUrl()}/assets/css/fontawesome-all.min.css" rel="stylesheet" />
     <script type="text/javascript" src="templates/{$template}/js/vendor.min.js?v={$versionHash}"></script>
     <script type="text/javascript" src="templates/{$template}/js/scripts.min.js?v={$versionHash}"></script>

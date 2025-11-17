@@ -1,0 +1,368 @@
+/*
+ * Blend Dark Theme Overrides
+ * This file turns the light Blend theme into a dark theme.
+ */
+
+:root {
+    --dark-bg: #1c1c1e;        /* Very dark grey (almost black) */
+    --dark-surface1: #2c2c2e;  /* Dark grey for content backgrounds */
+    --dark-surface2: #3a3a3c;  /* Slightly lighter grey for inputs/hovers */
+    --dark-text: #f1f1f1;      /* Main text (off-white) */
+    --dark-text-secondary: #b0b0b0; /* Lighter text */
+    --dark-border: #4a4a4a;    /* Borders */
+    --dark-link: #5a9eff;      /* Bright blue for links */
+}
+
+body, .contentarea.theme-content-bg {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.contentarea {
+    background-color: #5d6466 !important; /* User's requested dashboard background */
+    border-left-color: var(--dark-border);
+    color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.whmcs-modal .modal-header h4 {
+    color: var(--dark-text);
+}
+
+a {
+    color: var(--dark-link);
+}
+
+/* --- Tables --- */
+table.datatable td,
+table.form,
+table.clientssummarystats td,
+.table-themed tr td {
+    background-color: var(--dark-surface1);
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+table.datatable tr:not(.detail-row):hover td,
+.table-themed tr:hover td {
+    background-color: var(--dark-surface2);
+}
+
+table.datatable td,
+.table-themed tr td {
+    border-bottom-color: var(--dark-border);
+}
+
+table.clientssummarystats tr.altrow td {
+    background-color: var(--dark-surface2);
+}
+
+/* --- Forms --- */
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select,
+.selectize-input {
+    background-color: var(--dark-surface2) !important;
+    color: var(--dark-text) !important;
+    border-color: var(--dark-border) !important;
+}
+
+table.form td.fieldlabel {
+    background-color: var(--dark-surface1);
+}
+
+table.form td.fieldarea {
+    background-color: var(--dark-surface2);
+}
+
+/* --- Sidebar & Navigation --- */
+.sidebar {
+    background-color: var(--dark-surface1);
+}
+
+.sidebar .sidebar-header {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--dark-text-secondary);
+}
+
+.sidebar a {
+    color: var(--dark-link);
+}
+
+/* --- Info Boxes --- */
+.infobox {
+    background-color: #4a462a;
+    border-color: #E6C26E;
+    color: #FAF6D4;
+}
+.infobox span.title {
+    color: #E6C26E;
+}
+
+.successbox {
+    background-color: #2a3a1f;
+    border-color: #77AB13;
+    color: #D9E6C3;
+}
+.successbox span.title {
+    color: #77AB13;
+}
+
+.errorbox {
+    background-color: #4a2a26;
+    border-color: #AE432E;
+    color: #F2D4CE;
+}
+.errorbox span.title {
+    color: #AE432E;
+}
+
+/* --- Modals --- */
+.whmcs-modal .modal-content,
+div.admindialog div.content {
+    background-color: var(--dark-surface1);
+    color: var(--dark-text);
+}
+
+.whmcs-modal .modal-header:not(.panel-heading),
+.whmcs-modal .modal-footer {
+    background-color: var(--dark-surface2);
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+/* --- Other Elements --- */
+.clientssummarybox,
+.contentarea .page-header-btns {
+    background-color: var(--dark-surface2);
+    border-color: var(--dark-border);
+}
+
+.inset-grey-bg {
+    background-color: var(--dark-bg);
+}
+
+.inset-element-container,
+.bordered {
+    background-color: var(--dark-surface1);
+    border-color: var(--dark-border);
+}
+
+/* --- Ticket Replies --- */
+#ticketreplies .reply {
+    background-color: var(--dark-surface1);
+    border-color: var(--dark-border);
+    box-shadow: 0 0 5px var(--dark-border);
+}
+#ticketreplies .reply .rightcol {
+    border-left-color: var(--dark-border);
+}
+#ticketreplies .message {
+    color: var(--dark-text);
+}
+#ticketreplies .reply.staff {
+    background-color: #2a2a21; /* Dark yellow-ish */
+    border-color: #4d4d3a;
+    box-shadow: 0 0 5px #4d4d3a;
+}
+#ticketreplies .reply.note {
+    background-color: #2e1b21; /* Dark red-ish */
+    border-color: #5c3842;
+    box-shadow: 0 0 5px #5c3842;
+}
+#ticketreplies .reply.note .rightcol {
+    border-left-color: var(--dark-border);
+}
+
+/* --- Search --- */
+.intellisearch.active .form-control {
+    background-color: #14273e;
+}
+.intellisearchresults {
+    background-color: var(--dark-surface1);
+}
+.intellisearchresults .search-header, .intellisearchresults .search-footer {
+    background-color: var(--dark-surface2);
+    color: var(--dark-text);
+}
+.intellisearchresults ul li {
+    background-color: var(--dark-surface1);
+    color: var(--dark-text-secondary);
+}
+.intellisearchresults ul li:hover {
+    background-color: var(--dark-surface2);
+}
+.intellisearchresults h5 {
+    color: var(--dark-text-secondary);
+    border-bottom-color: var(--dark-border);
+}
+.intellisearchresults ul li a {
+    color: var(--dark-link);
+}
+/* Main dashboard panels/widgets */
+.panel-default {
+    background-color: var(--dark-surface1);
+    border-color: var(--dark-border);
+}
+.panel-default > .panel-heading {
+    background-color: var(--dark-surface2);
+    border-bottom: 1px solid var(--dark-border);
+    color: var(--dark-text);
+}
+.panel-default > .panel-footer {
+    background-color: var(--dark-surface2);
+    border-top: 1px solid var(--dark-border);
+}
+
+/* Stats widgets */
+.stat-blocks .stat {
+    background-color: var(--dark-surface2);
+    color: var(--dark-text);
+}
+.stat-blocks .stat p {
+    color: var(--dark-text-secondary);
+}
+
+/* Homepage "Home" box */
+.homebox {
+    background-color: var(--dark-surface1);
+    border-color: var(--dark-border);
+}
+
+/* Data tables on dashboard */
+.table-post-login {
+    color: var(--dark-text);
+}
+.table-post-login tbody > tr > td {
+    border-color: var(--dark-border);
+}
+.table-post-login > tbody > tr:hover > td {
+    background-color: var(--dark-surface2) !important;
+}
+.well {background-color:#000000;
+}
+/* Style for .btn.btn-default.btn-sm */
+.btn.btn-default.btn-sm {
+    background-color: #337ab7 !important;
+    border-color: #2e6da4;
+    color: #ffffff !important;
+}
+
+/* Optional: Add a hover/focus state so it looks right when clicked */
+.btn.btn-default.btn-sm:hover,
+.btn.btn-default.btn-sm:focus {
+    background-color: #286090;
+    border-color: #204d74;
+    color: #ffffff;
+}
+/* Admin tabs */
+.admin-tabs-v2 .admin-tabs li a {background-color:#000000; color:#ffffff;}
+.server-update-tracker-table tr:hover {background-color: #00003b !important;}
+/*
+ * =================================
+ * General Content & Settings Pages
+ * =================================
+ */
+
+/* General page/panel backgrounds */
+.panel-default,
+.panel-default > .panel-body,
+.tab-content .tab-pane,
+div.admin-tabs > .active,
+.apps-and-integrations .app-wrapper,
+.whmcs-modal .modal-body {
+    background-color: var(--dark-surface1);
+    color: var(--dark-text);
+}
+
+/* Panel Headings */
+.panel-default > .panel-heading,
+.panel-primary > .panel-heading {
+    background-color: var(--dark-surface2);
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+/* Tabs */
+ul.admin-tabs > li > a,
+.nav-tabs > li > a {
+    background-color: var(--dark-surface2);
+    border-color: var(--dark-border);
+    color: var(--dark-text-secondary);
+}
+ul.admin-tabs > li.active > a,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: var(--dark-surface1);
+    color: var(--dark-text);
+    border-bottom-color: transparent;
+}
+.nav-tabs {
+    border-bottom-color: var(--dark-border);
+}
+div.admin-tabs > .active {
+    border-color: var(--dark-border);
+}
+
+/* Form Tables */
+table.form,
+table.form td,
+.markdown-content table {
+    background-color: var(--dark-surface1);
+    border-color: var(--dark-border);
+}
+table.form td.fieldlabel {
+    background-color: var(--dark-surface2);
+}
+table.form td.fieldarea {
+    background-color: var(--dark-surface1);
+}
+.markdown-content table > thead > tr > th {
+    background-color: var(--dark-surface2);
+    border-color: var(--dark-border);
+}
+
+/* Alert Boxes */
+.alert-grey {
+    background-color: var(--dark-surface2);
+    border-color: var(--dark-border);
+    color: var(--dark-text-secondary);
+}
+.alert-info {
+    background-color: #1c3a50;
+    border-color: #2a5a7f;
+    color: #bce8f1;
+}
+.alert-warning {
+    background-color: #4a462a;
+    border-color: #8a6d3b;
+    color: #fcf8e3;
+}
+
+/* Search bar on list pages */
+.search-bar {
+    background-color: var(--dark-surface2);
+    border-color: var(--dark-border);
+}
+
+/* Fix text colors */
+.text-grey {
+    color: var(--dark-text-secondary);
+}
+.text-danger, .textred {
+    color: #f47171;
+}
+.text-success, .textgreen {
+    color: #68c96b;
+}
+.contentarea.theme-content-bg .theme-header {background-color:#000000 !important;}
+.system-settings-index .setup-side-menu li a {color:#ffffff !important;}
+.system-settings-index a.setting {background-color:#000000 !important; color:#ffffff !important;}
+.search-bar {background-color{var(--dark-surface2) !important;}
