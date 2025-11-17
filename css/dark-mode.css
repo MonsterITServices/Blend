@@ -1,0 +1,176 @@
+/*
+ * WHMCS Blend Admin Theme - Dark Mode
+ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dark-bg: #1c1c1e;        /* Very dark grey (almost black) */
+        --dark-surface1: #2c2c2e;  /* Dark grey for content backgrounds */
+        --dark-surface2: #3a3a3c;  /* Slightly lighter grey for inputs/hovers */
+        --dark-text: #f1f1f1;      /* Main text (off-white) */
+        --dark-text-secondary: #b0b0b0; /* Lighter text */
+        --dark-border: #4a4a4a;    /* Borders */
+        --dark-link: #5a9eff;      /* Bright blue for links */
+        --dark-brand-nav: #1A4D80; /* Original nav color - it's already dark */
+    }
+
+    body, .contentarea.theme-content-bg {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+    }
+
+    .contentarea {
+        background-color: var(--dark-surface1);
+        border-left-color: var(--dark-border);
+        color: var(--dark-text);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--dark-text);
+    }
+
+    a {
+        color: var(--dark-link);
+    }
+
+    /* --- Tables --- */
+    table.datatable td,
+    table.form,
+    table.clientssummarystats td {
+        background-color: var(--dark-surface1);
+        border-color: var(--dark-border);
+    }
+
+    table.datatable tr:not(.detail-row):hover td,
+    .table-themed tr:hover td {
+        background-color: var(--dark-surface2);
+    }
+
+    table.datatable td,
+    .table-themed tr td {
+        border-bottom-color: var(--dark-border);
+    }
+    
+    table.clientssummarystats tr.altrow td {
+        background-color: var(--dark-surface2);
+    }
+
+    /* --- Forms --- */
+    .form-control,
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    textarea,
+    select,
+    .selectize-input {
+        background-color: var(--dark-surface2) !important;
+        color: var(--dark-text) !important;
+        border-color: var(--dark-border) !important;
+    }
+
+    table.form td.fieldlabel {
+        background-color: var(--dark-surface1);
+    }
+
+    table.form td.fieldarea {
+        background-color: var(--dark-surface2);
+    }
+
+    /* --- Sidebar & Navigation --- */
+    .sidebar {
+        background-color: var(--dark-surface1);
+    }
+
+    .sidebar .sidebar-header {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: var(--dark-text-secondary);
+    }
+
+    /* --- Info Boxes --- */
+    .infobox {
+        background-color: #4a462a;
+        border-color: #E6C26E;
+        color: #FAF6D4;
+    }
+    .infobox span.title {
+        color: #E6C26E;
+    }
+
+    .successbox {
+        background-color: #2a3a1f;
+        border-color: #77AB13;
+        color: #D9E6C3;
+    }
+    .successbox span.title {
+        color: #77AB13;
+    }
+
+    .errorbox {
+        background-color: #4a2a26;
+        border-color: #AE432E;
+        color: #F2D4CE;
+    }
+    .errorbox span.title {
+        color: #AE432E;
+    }
+
+    /* --- Modals --- */
+    .whmcs-modal .modal-content,
+    div.admindialog div.content {
+        background-color: var(--dark-surface1);
+        color: var(--dark-text);
+    }
+
+    .whmcs-modal .modal-header:not(.panel-heading),
+    .whmcs-modal .modal-footer {
+        background-color: var(--dark-surface2);
+        border-color: var(--dark-border);
+        color: var(--dark-text);
+    }
+
+    /* --- Other Elements --- */
+    .clientssummarybox,
+    .contentarea .page-header-btns {
+        background-color: var(--dark-surface2);
+        border-color: var(--dark-border);
+    }
+
+    .inset-grey-bg {
+        background-color: var(--dark-bg);
+    }
+
+    .inset-element-container,
+    .bordered {
+        background-color: var(--dark-surface1);
+        border-color: var(--dark-border);
+    }
+
+    /* --- Ticket Replies --- */
+    #ticketreplies .reply {
+        background-color: var(--dark-surface1);
+        border-color: var(--dark-border);
+        box-shadow: 0 0 5px var(--dark-border);
+    }
+    #ticketreplies .reply .rightcol {
+        border-left-color: var(--dark-border);
+    }
+    #ticketreplies .message {
+        color: var(--dark-text);
+    }
+    #ticketreplies .reply.staff {
+        background-color: #2a2a21; /* Dark yellow-ish */
+        border-color: #4d4d3a;
+        box-shadow: 0 0 5px #4d4d3a;
+    }
+    #ticketreplies .reply.note {
+        background-color: #2e1b21; /* Dark red-ish */
+        border-color: #5c3842;
+        box-shadow: 0 0 5px #5c3842;
+    }
+    #ticketreplies .reply.note .rightcol {
+        border-left-color: var(--dark-border);
+    }
+}
